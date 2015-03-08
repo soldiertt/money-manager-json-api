@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Frais {{year}} - Importation</h1>
+
+    <form name="importForm">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Montant</th>
+                <th>Contrepartie</th>
+                <th>Communication</th>
+                <th>Catégorie</th>
+                <th>Date compta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tx in txToImport" ng-class="{success: !tx.fromAccount.own}">
+                <td>{{tx.date | date}}</td>
+                <td>{{tx.amount | currency}}</td>
+                <td>
+                    <span ng-show="tx.fromAccount.own">{{tx.recipient.name}} ({{tx.recipient.accountNumber}})</span>
+                    <span ng-show="!tx.fromAccount.own">{{tx.fromAccount.name}} ({{tx.fromAccount.accountNumber}})</span>
+                </td>
+                <td>{{tx.communication}}</td>
+                <td>
+                    <select ng-model="tx.labelId" ng-options="label.id as (label.name) group by (label.type+'-'+label.fixed) for label in labels | orderBy: ['type','fixed','name']">
+                        <option value="">Selectionnez un libellé ...</option>
+                    </select>
+                </td>
+                <td><input type="date" ng-model="tx.dateCompta" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <button name="submit" ng-click="saveAll()">Save</button>
+    </form>
+</div>

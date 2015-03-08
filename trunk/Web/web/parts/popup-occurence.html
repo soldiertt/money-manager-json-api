@@ -1,0 +1,18 @@
+<div class="triangle"></div>
+<div class="ns-popover-tooltip">
+    <table class="table table-condensed">
+        <thead>
+            <tr><th>Date</th><th>From</th><th>To</th><th>Montant</th><th>Communication</th><th></th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tx in occurence.transactions">
+                <td>{{tx.date | date}}</td>
+                <td>{{tx.fromAccount.name}}</td>
+                <td>{{tx.recipient.name}}</td>
+                <td>{{tx.amount | currency}}</td>
+                <td>{{tx.communication}}</td>
+                <td><span class="action glyphicon glyphicon-remove" ng-click="deleteTx(tx.id)"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
