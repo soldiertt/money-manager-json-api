@@ -1,0 +1,90 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+h1, h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    background-color: #addcfa;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    margin: 0px;
+}
+nav li {
+    display: inline;
+}
+nav li.btn-left {
+    margin-left: 20px;
+}
+nav li.btn-right {
+    float:right;
+    margin-right: 20px;
+}
+nav a.btnHead {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+nav a.btnHead:hover {
+    background-color: #e3e3e3;
+    border-color: rgba(0,0,0,0.5);
+}
+
+nav a.btnHead:active {
+    background-color: #CCC;
+    border-color: rgba(0,0,0,0.9);
+}
+
+nav a.btnHead.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+nav a.btnHead.btn-grey {
+    background-color: #d2dade;
+    border-color: rgba(95, 87, 87, 0.9);
+    cursor: default;
+}
+
+nav a.btnHead.btn-blue:hover {
+    background-color: #4F87A2;
+    border-color: rgba(0,0,0,0.5);
+}
+
+nav a.btnHead.btn-blue:active {
+    background-color: #3C677B;
+    border-color: rgba(0,0,0,0.9);
+}
+
+.table-money td, .table-money th {
+    text-align: center;
+}
+
+.add-icon {
+    float:right;
+    cursor: pointer;
+}
+
+.action {
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+
+    <h1>Frais {{year}}</h1>
+
+    <h2 ng-show="view === 'fixed'">Frais fixes</h2>
+    <h2 ng-show="view === 'other'">Autres frais</h2>
+
+    <table class="table table-striped table-bordered table-condensed table-money">
+        <thead>
+            <tr>
+                <th>{{year}}</th>
+                <th ng-repeat="month in months">{{month.month}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="label in labels | orderBy:['type','name']"><td>{{label.name}}<img src="images/add-icon.gif" alt="add" class="add-icon" ng-click="addTx(label)" /></td>
+                <td ng-repeat="occurence in label.occurences" colspan="{{12/label.occSize}}" ng-class="cellClasses(occurence, label.type, $index)">
+                    <span ns-popover ns-popover-template="parts/popup-occurence.html" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click="true"
+                       ng-show="occurence.total &gt; 0" ng-click="currentOccurence(label, $index)">
+                        {{occurence.total | currency}}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   <div ng-controller="ModalAddTxCtrl"></div>
+    
+    
+</div>

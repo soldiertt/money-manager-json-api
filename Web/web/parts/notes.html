@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Notes {{year}}</h1>
+    <ul>
+        <li ng-repeat="note in notes">{{note.content}} <span class="glyphicon glyphicon-remove" ng-click="deleteNote(note.id)"></span></li>
+    </ul>
+    <form ng-submit="saveNote()">
+        <div class="form-group">
+            <label for="note-content">Nouvelle note :</label>
+            <textarea id="note-content" class="form-control" ng-model="newNote.content"></textarea>
+        </div>
+        <input type="submit" value="Save" class="btn btn-success" />
+        <input type="reset" value="Reset" class="btn btn-warning" />
+    </form>
+</div>
