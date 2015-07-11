@@ -12,7 +12,9 @@ public enum TransactionImportType {
     RETRAIT_BELG("Retrait Belgiq."),
     DOMICILIATION("Domiciliation SEPA"),
     BELFIUS_OUT("BELFIUS_OUT"),
-    DECOMPTE_INTERETS("Votre décompte d'intérêts");
+    DECOMPTE_INTERETS("Votre décompte d'intérêts"),
+    CARBURANT("Achat carburant Bancontact");
+
     private String value;
 
     TransactionImportType(String value) {
