@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Money.iml" filepath="$PROJECT_DIR$/Money.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Web/Web.iml" filepath="$PROJECT_DIR$/Web/Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/money.iml" filepath="$PROJECT_DIR$/money.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Web/money-web.iml" filepath="$PROJECT_DIR$/Web/money-web.iml" />
     </modules>
   </component>
 </project>
-
