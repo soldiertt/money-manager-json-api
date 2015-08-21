@@ -4,7 +4,7 @@
     <root id="archive" name="money.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Money" />
+          <element id="module-output" name="money" />
           <element id="module-output" name="money-web" />
         </element>
         <element id="directory" name="lib">
