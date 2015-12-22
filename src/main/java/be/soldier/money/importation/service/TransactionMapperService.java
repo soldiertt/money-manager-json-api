@@ -24,7 +24,9 @@ public class TransactionMapperService {
     public Transaction map(ArgentaTransactionDto txDto) {
 
         Transaction tx = null;
-        if (txDto.getType().equals(TransactionImportType.BANCONTACT)
+        if (txDto.getType().equals(TransactionImportType.PAYMENT_PENSION)) {
+            tx = new Transaction(null, txDto.getReference(), txDto.getTxDate(), txDto.getAmount(), "Epargne pension", null);
+        } else if (txDto.getType().equals(TransactionImportType.BANCONTACT)
                 || txDto.getType().equals(TransactionImportType.RETRAIT)
                 || txDto.getType().equals(TransactionImportType.CARBURANT)) {
             tx = new Transaction(null, txDto.getReference(), txDto.getTxDate(), txDto.getAmount(), txDto.getAccountName(), null);
