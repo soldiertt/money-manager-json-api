@@ -13,7 +13,8 @@ public enum TransactionImportType {
     DOMICILIATION("Domiciliation SEPA"),
     BELFIUS_OUT("BELFIUS_OUT"),
     DECOMPTE_INTERETS("Votre décompte d'intérêts"),
-    CARBURANT("Achat carburant Bancontact");
+    CARBURANT("Achat carburant Bancontact"),
+    PAYMENT_PENSION("Versement EP");
 
     private String value;
 
